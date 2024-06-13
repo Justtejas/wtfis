@@ -40,7 +40,7 @@ type Response struct {
 }
 
 func main() {
-	if len(os.Args) < 2 {
+	if len(os.Args) < 2 || len(os.Args) > 2 {
 		fmt.Println("Usage : wtfis word")
 		fmt.Println("Usage : wtfis \"word word\"")
 		os.Exit(1)
@@ -75,7 +75,7 @@ func handleRequest(url string) ([]Response, error) {
 	var res []Response
 	err = json.Unmarshal([]byte(jsonData), &res)
 	if err != nil {
-		fmt.Println("error while unmarshling JSON", err)
+		fmt.Println("Cannot find the meaning of the given word.")
 	}
 	return res, nil
 }
