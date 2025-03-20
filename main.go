@@ -8,6 +8,7 @@ import (
 	"os"
 )
 // comment
+// another comment
 
 type Definition struct {
 	Definition string   `json:"definition"`
