@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 )
+// comment
 
 type Definition struct {
 	Definition string   `json:"definition"`
